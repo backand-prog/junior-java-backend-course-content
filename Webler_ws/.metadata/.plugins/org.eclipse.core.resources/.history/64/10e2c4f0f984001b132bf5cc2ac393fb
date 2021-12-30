@@ -1,0 +1,26 @@
+package progKurzus;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		String fajlNev = "kurzus.txt";
+		List<Tanulok> tanulok = new ArrayList<Tanulok>();
+		FajlKezelo fk = new FajlKezelo();
+		ProgKurzus feladatObj = new ProgKurzus();
+		
+		tanulok = fk.fajlBeolvas(fajlNev);
+		
+		System.out.println("3. feladat:");
+		System.out.println("\tA tanfolyamra " + feladatObj.beiratkozottFo(tanulok) + " fõ iratkozott be.");
+		System.out.println("4. feladat");
+		System.out.println("\tFiúk\t átlagteljesítménye:\t" + feladatObj.atlagNemSzerint(tanulok, "m") + "%");
+		System.out.println("\tLányok\t átlagteljesítménye:\t" + feladatObj.atlagNemSzerint(tanulok, "f") + "%");
+		
+		
+	}
+
+}

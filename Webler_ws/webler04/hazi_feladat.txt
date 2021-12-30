@@ -1,0 +1,7 @@
+A tömb elemei: 2 10 14 14 16 17 24 26 35 36 
+A legkisebb elem: 2
+A legnagyobb elem: 36
+Az elemek összege: 194
+Az elemek átlaga: 19.0
+A rendezett tömb elemei: 2 10 14 14 16 17 24 26 35 36 
+A keresett szám benne volt.

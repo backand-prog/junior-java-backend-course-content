@@ -1,0 +1,34 @@
+package progKurzus;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FajlKezelo {
+	
+	public List<Tanulok> fajlBeolvas(String fajlNev) {
+		
+		List<Tanulok> tanulok = new ArrayList<Tanulok>();
+		
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fajlNev), "UTF-8"));
+			
+			
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return tanulok;
+		
+		
+	}
+
+}

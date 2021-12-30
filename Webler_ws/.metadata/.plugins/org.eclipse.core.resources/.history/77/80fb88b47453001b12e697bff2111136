@@ -1,0 +1,57 @@
+package sandbox;
+
+import java.util.Random;
+
+public class Tomb {
+
+	public static void main(String[] args) {
+		int[] tomb = Tombfeltolt(10);
+		TombKiir(tomb);
+		System.out.println();
+		System.out.println("A legkisebb elem: " + TombMin(tomb));
+		
+
+	}
+	
+	public static int TombMax(int[] tomb) {
+		int max = tomb[0];
+		for (int i = 0; i < tomb.length; i++) {
+			if (tomb[i] > max) {
+				max = int[i];
+			}
+		}
+		return max;
+	}
+	
+	public static int TombMin(int[] tomb) {
+		int min = tomb[0];
+		for (int i = 0; i < tomb.length; i++) {
+			if (tomb[i] < min) {
+				min = tomb[i];
+			}
+		}
+		
+		return min;
+	}
+	
+	public static void TombKiir (int[] tomb) {
+		for (int item : tomb) {
+			System.out.print(item + " ");
+		}
+	}
+	
+	public static int[] Tombfeltolt (int meret) {
+		
+		Random r = new Random();
+		
+		int[] tomb = new int[meret];
+		
+		for (int i = 0; i < tomb.length; i++) {
+			tomb[i] = r.nextInt(50) + 1;
+		}
+		
+		return tomb;
+		
+	}
+
+}

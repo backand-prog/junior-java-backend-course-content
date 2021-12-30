@@ -1,0 +1,14 @@
+package progKurzus;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Tanulok tanulok = new Tanulok();
+		FajlKezelo fk = new FajlKezelo();
+		
+		
+
+	}
+
+}

@@ -1,0 +1,67 @@
+package kerekParboltSajat;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+
+public class KerekparBolt {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					KerekparBolt window = new KerekparBolt();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public KerekparBolt() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 868, 609);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnLegolcsobb = new JButton("Legolcs\u00F3bb haszn\u00E1lt MTB");
+		
+		
+		btnLegolcsobb.setBounds(62, 299, 244, 47);
+		frame.getContentPane().add(btnLegolcsobb);
+		
+		JButton btnGyerekKerekparDb = new JButton("Legolcs\u00F3bb haszn\u00E1lt MTB");
+		btnGyerekKerekparDb.setBounds(62, 377, 244, 47);
+		frame.getContentPane().add(btnGyerekKerekparDb);
+		
+		JButton btnTrekkingFerfiFajlbaIr = new JButton("Legolcs\u00F3bb haszn\u00E1lt MTB");
+		btnTrekkingFerfiFajlbaIr.setBounds(62, 449, 244, 47);
+		frame.getContentPane().add(btnTrekkingFerfiFajlbaIr);
+		
+		JButton btnNewButton = new JButton("KIL\u00C9P");
+		btnNewButton.setForeground(Color.WHITE);
+		btnNewButton.setBackground(Color.RED);
+		btnNewButton.setBounds(653, 476, 136, 55);
+		frame.getContentPane().add(btnNewButton);
+	}
+}

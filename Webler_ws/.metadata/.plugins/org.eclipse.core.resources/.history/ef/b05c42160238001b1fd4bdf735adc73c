@@ -1,0 +1,11 @@
+package HF01;
+
+public class cicás {
+	
+	int lives;
+	String name;
+	
+	
+	
+	
+}

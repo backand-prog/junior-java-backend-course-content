@@ -1,0 +1,17 @@
+package progKurzus;
+
+public class Tanulok {
+	
+	private String nev;
+	private byte nem;
+	private byte finanszKod;
+	private int befizetettOsszeg;
+	private byte progEredmeny;
+	private byte grafEredmeny;
+	private byte architektEredmeny;
+	private byte mestintEredmeny;
+	
+	
+	
+	
+}

@@ -1,0 +1,18 @@
+<?xml version = "1.0"?>
+<employees>
+   <employee id = "532">
+      <firstname>John</firstname>
+      <lastname>Doe</lastname>
+      <job>programmer</job>
+   </employee>
+   <employee id = "571">
+      <firstname>Jane</firstname>
+      <lastname>Doe</lastname>
+      <job>designer</job>
+   </employee>
+   <employee id = "577">
+      <firstname>Jonnie</firstname>
+      <lastname>Doe</lastname>
+      <job>DB specialist</job>
+   </employee>
+</employees>

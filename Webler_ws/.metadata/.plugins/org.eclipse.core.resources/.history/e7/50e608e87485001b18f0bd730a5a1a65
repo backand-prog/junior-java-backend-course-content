@@ -1,0 +1,127 @@
+package szineszek;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+
+public class Feladatok {
+	
+	public void adatokKiir(List<SzineszTarolo> szineszek) {
+		/*
+		szineszek.stream()
+			.forEach(x -> System.out.println(
+					x.getNev() + "\t" +
+			
+					(x.getNem()  == 1 ? "férfi" : "nõ") + "\t" +
+						
+					x.getSzul_datum() + "\t" +
+					
+					x.getSzul_orszag() + "\t" +
+					
+					x.getSzul_varos()
+					
+					)
+
+			);
+			*/
+
+		for (SzineszTarolo item : szineszek) {
+			System.out.print(item.getNev());
+			System.out.print("\t");
+			System.out.print(item.getNem() == 1 ? "férfi" : "nõ");
+			System.out.print("\t");
+			System.out.printf("%tF", item.getSzulDatum());
+			System.out.print("\t");
+			System.out.print(item.getSzulOrszag());
+			System.out.print("\t");
+			System.out.println(item.getSzulVaros());
+		}
+
+	}
+
+	//b
+	public void budapestenSzuletettFilmSzamKiir(List<SzineszTarolo> szineszek) {
+
+		szineszek.stream()
+			.filter(x -> x.getSzulVaros().equals("Budapest"))
+			.forEach(x -> System.out.println(x.getNev() + ": " + x.getFilmSzam() + " film"));
+
+	}
+
+	//c
+	public long berlinbenSzuletettDb(List<SzineszTarolo> szineszek) {
+
+		return szineszek.stream().filter(x -> x.getSzulVaros().equals("Berlin")).count();
+
+	}
+
+	//d
+	public long usabanSzuletettFerfiDb (List<SzineszTarolo> szineszek) {
+
+		return szineszek.stream().filter(x -> x.getNem() == 1  && x.getSzulOrszag().equals("USA")).count();
+
+	}
+
+	//f
+	public int olaszorszagbanSzulOsszesFilm(List<SzineszTarolo> szineszek) {
+
+		int sum = 0;
+
+		for (SzineszTarolo item : szineszek) {
+			if (item.getSzulOrszag().equals("Olaszország")) {
+				sum = sum + item.getFilmSzam();	
+			}
+
+		}
+
+		return sum;
+
+	}
+	
+	public void legfiatalabbFerfiNoiSzineszek(List<SzineszTarolo> szineszek) {
+		
+		
+		
+		for (int i = 0; i < szineszek.size(); i++) {
+			
+		}
+		
+		/*
+		SzineszTarolo legfiatalabbFerfi = null;
+		try {
+			Date minFerfiSzul = new SimpleDateFormat("yyyy-MM-dd").parse("1800-01-01");
+			legfiatalabbFerfi = null;
+			for (SzineszTarolo item : szineszek) {
+				if (item.getSzulDatum().after(legfiatalabbFerfi.getSzulDatum()) && item.getNem() == 1) {
+					legfiatalabbFerfi = item;			
+				}
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		SzineszTarolo legfiatalabbNo = null;
+		Date minNoSzul;
+		try {
+			minNoSzul = new SimpleDateFormat("yyyy-MM-dd").parse("1800-01-01");
+			for (SzineszTarolo item : szineszek) {
+				if (item.getSzulDatum().after(legfiatalabbNo.getSzulDatum()) && item.getNem() == 0) {
+					legfiatalabbNo = item;
+				}
+			}
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		System.out.println("A legfiatalabb férfi: " + legfiatalabbFerfi.getNev() + ", született: " + legfiatalabbFerfi.getSzulDatum());
+		System.out.println("A legfiatalabb nõ: " + legfiatalabbNo.getNev() + ", született: " + legfiatalabbNo.getSzulDatum());
+		*/
+	}
+
+}

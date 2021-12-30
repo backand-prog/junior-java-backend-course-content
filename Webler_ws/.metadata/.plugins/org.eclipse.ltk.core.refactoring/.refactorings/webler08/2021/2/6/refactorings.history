@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;btnHibisAdatTorlse&apos; in &apos;kerekparBolt.KerekparBolt&apos; to &apos;btnHibasAdatTorlese&apos;&#x0D;&#x0A;- Original project: &apos;webler08&apos;&#x0D;&#x0A;- Original element: &apos;kerekparBolt.KerekparBolt.btnHibisAdatTorlse&apos;&#x0D;&#x0A;- Renamed element: &apos;kerekparBolt.KerekparBolt.btnHibasAdatTorlese&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;btnHibisAdatTorlse&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;kerekparBolt{KerekparBolt.java[KerekparBolt^btnHibisAdatTorlse" name="btnHibasAdatTorlese" references="true" setter="false" stamp="1612802504400" textual="false" version="1.0"/>
+</session>

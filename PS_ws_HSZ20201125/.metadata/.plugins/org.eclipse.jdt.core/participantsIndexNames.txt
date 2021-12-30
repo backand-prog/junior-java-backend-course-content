@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1316102525.index
+\szmzv02_BackAndras\src\main\java
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1216743925.index
+\shelter\src\main\java
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2955147048.index
+\loan\src\main\java
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4109115015.index
+\ems\src\main\java
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2926435894.index
+\konyvtar\src\main\java
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4052926887.index
+\konyvtar\src\main\java
+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1914305507.index
+\szmzv02_pv01_BackAndras\src\main\java

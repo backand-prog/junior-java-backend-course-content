@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;tortak&apos; in &apos;tortaGyarCukraszda.FajlKezelo.fajlBeolvas(...)&apos; to &apos;tortaLista&apos;&#x0D;&#x0A;- Original project: &apos;webler14TortaGyar&apos;&#x0D;&#x0A;- Original element: &apos;tortaGyarCukraszda.FajlKezelo.fajlBeolvas(String).tortak&apos;&#x0D;&#x0A;- Renamed element: &apos;tortak&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;tortak&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;tortaGyarCukraszda{FajlKezelo.java[FajlKezelo~fajlBeolvas~QString;@tortak!172!215!184!189!QList\&lt;QTorta;&gt;;!0!false" name="tortaLista" references="true" stamp="1616003865251" version="1.0"/>
+</session>

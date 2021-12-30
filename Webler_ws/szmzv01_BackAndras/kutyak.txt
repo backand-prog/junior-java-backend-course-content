@@ -1,0 +1,24 @@
+azonosító;becenév;fajta;kor;neme;ivartalanitott
+1;Dörmi;dobermann;1;kan;1
+2;Havas;husky;0;szuka;0
+3;Cézár;magyar vizsla;1;kan;1
+4;Beni;keverék;1;kan;0
+5;Mágus;szetter;1;kan;0
+6;Léda;dobermann;0;szuka;1
+7;Morzsi;tacskó;4;kan;1
+8;Panni;magyar vizsla;1;szuka;1
+9;Roni;orosz agár;2;kan;0
+10;Sharon;keverék;2;szuka;1
+11;Hetty;keverék;5;szuka;0
+12;Frankó;magyar vizsla;1;kan;0
+13;Hektor;magyar vizsla;2;kan;1
+14;Molli;tacskó;1;szuka;1
+15;Nimród;német kopó;2;kan;0
+16;Toto;tacskó;1;kan;0
+17;Hugó;magyar agár;0;kan;1
+18;Maci;keverék;8;kan;1
+19;Alma;keverék;2;szuka;1
+20;Maxi;magyar vizsla;3;kan;1
+21;Szundi;keverék;0;szuka;1
+22;Oszkár;keverék;3;kan;0
+23;Menfisz;csivava;5;szuka;0

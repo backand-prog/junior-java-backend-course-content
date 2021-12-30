@@ -1,0 +1,3 @@
+apple;alma
+orange;narancs
+banana;banán

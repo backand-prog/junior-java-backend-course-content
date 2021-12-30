@@ -1,0 +1,20 @@
+azonosító	név	poszt	gólok_száma	sérült	mérkőzések_száma
+34	Kiss Tímea	jobbszélső	52	0	15
+71	Balogh Elvira	beálló	22	0	12
+22	Juhász Erika	irányító	12	0	15
+17	Oláh Petra	jobbátlövő	68	1	14
+9	Takács Anna	balszélső	30	0	15
+3	Szilágyi Bernadett	irányító	10	1	15
+6	Simon Éva	beálló	16	0	13
+4	Mészáros Fruzsina	kapus	0	0	2
+18	Fehér Anna	balszélső	8	0	15
+10	Török Bíborka	balátlövő	49	0	6
+2	Molnár Réka	irányító	30	0	11
+8	Kiss Tímea	beálló	22	0	10
+35	Varga Erika	balszélső	39	1	15
+81	Kovács Olga	jobbátlövő	47	0	14
+98	Szabó Márta	jobbszélső	50	0	15
+24	Török Dóra	irányító	38	0	15
+22	Kiss Katalin	kapus	1	1	10
+19	Túri Ivett	jobbszélső	40	0	8
+11	Bőcs Viktória	kapus	0	0	3

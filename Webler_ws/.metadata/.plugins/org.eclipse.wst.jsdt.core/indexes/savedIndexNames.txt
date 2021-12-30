@@ -1,0 +1,19 @@
+INDEX VERSION 1.4+C:\Users\backandras\Desktop\Webler_ws\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2825960607.index
+3941424175.index
+2624547286.index
+2132037408.index
+3390205448.index
+3423766815.index
+2908675361.index
+3882050621.index
+3806616127.index
+2683673006.index
+2015106614.index
+991352728.index
+1944451116.index
+927014424.index
+1593813252.index
+845476833.index
+2621794897.index
+1071107464.index

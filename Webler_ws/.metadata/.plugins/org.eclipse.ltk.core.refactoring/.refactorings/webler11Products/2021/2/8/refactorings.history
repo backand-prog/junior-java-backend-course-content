@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;todolId&apos; in &apos;raktar.Delete.doGet(...)&apos; to &apos;torolId&apos;&#x0D;&#x0A;- Original project: &apos;webler11Products&apos;&#x0D;&#x0A;- Original element: &apos;raktar.Delete.doGet(HttpServletRequest, HttpServletResponse).todolId&apos;&#x0D;&#x0A;- Renamed element: &apos;todolId&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;todolId&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;raktar{Delete.java[Delete~doGet~QHttpServletRequest;~QHttpServletResponse;@todolId!1133!1176!1140!1146!QString;!0!false" name="torolId" references="true" stamp="1614546101106" version="1.0"/>
+</session>

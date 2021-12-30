@@ -1,0 +1,21 @@
+package progKurzus;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		String fajlNev = "kurzus.txt";
+		List<Tanulok> tanulok = new ArrayList<Tanulok>();
+		FajlKezelo fk = new FajlKezelo();
+		
+		tanulok = fk.fajlBeolvas(fajlNev);
+		
+		System.out.println(tanulok.size());
+		System.out.println(tanulok.get(1).getNev());
+		
+	}
+
+}

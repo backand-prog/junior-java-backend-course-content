@@ -1,0 +1,155 @@
+package afrolyamAblakos;
+
+import java.rmi.RemoteException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import hu.mnb.www.webservices.MNBArfolyamServiceSoapProxy;
+import hu.mnb.www.webservices.MNBArfolyamServiceSoap_GetExchangeRates_StringFault_FaultMessage;
+
+public class ConvertCurrencies {
+
+	private MNBArfolyamServiceSoapProxy afObj = new MNBArfolyamServiceSoapProxy();
+
+	public Double changeCurrency (String amount, String currencyCodeFrom, String currencyCodeTo, Calendar date) {
+		Double result = 0.0;
+		Double exchangeRateFrom = 0.0;
+		Double exchangeRateTo = 0.0;
+
+		
+		try {
+			
+		
+			/* The program running with the actual date
+			Date date = new Date();
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
+		    String currentDate = formatter.format(date).toString();    
+			*/
+			String dateString = new ConvertCurrencies().dateString(date);
+
+			System.out.println(dateString);
+
+			if (!currencyCodeFrom.equals("Forint")) {
+				
+				currencyCodeFrom = getExchangeFrom(currencyCodeFrom);
+				exchangeRateFrom = Double.parseDouble(afObj.getExchangeRates(dateString, dateString, currencyCodeFrom)
+						.split("curr=\"" + currencyCodeFrom +"\">")[1]
+								.split("</Rate>")[0]
+										.replace(",", "."));
+				
+
+			} 
+
+			if (!currencyCodeTo.equals("Forint")) {
+				
+				currencyCodeTo = getExchangeTo(currencyCodeTo);
+				exchangeRateTo = Double.parseDouble(afObj.getExchangeRates(dateString, dateString, currencyCodeTo)
+						.split("curr=\"" + currencyCodeTo +"\">")[1]
+								.split("</Rate>")[0]
+										.replace(",", "."));
+				
+			}
+
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (MNBArfolyamServiceSoap_GetExchangeRates_StringFault_FaultMessage e) {	
+			e.printStackTrace();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+
+
+		
+		if (currencyCodeFrom.equals("Forint") && currencyCodeTo.equals("Forint")) {
+			result = Double.parseDouble(amount);
+		} else if (!currencyCodeFrom.equals("Forint") && currencyCodeTo.equals("Forint")) {
+			result = Double.parseDouble(amount) * exchangeRateFrom;
+		} else if (!currencyCodeTo.equals("Forint") && currencyCodeFrom.equals("Forint")) {
+			result = Double.parseDouble(amount) / exchangeRateTo;
+		} else if (!currencyCodeFrom.equals("Forint") && !currencyCodeTo.equals("Forint")) {
+			Double amountInFt = exchangeRateFrom * Double.parseDouble(amount);
+			result = amountInFt / exchangeRateTo;
+		}
+		return result;
+
+	}
+	
+	public String dateString (Calendar date) {
+		String dateString = "";
+		
+		Integer year = date.get(date.YEAR);
+		Integer month = date.get(date.MONTH);
+		Integer day = date.get(date.DAY_OF_MONTH);
+		month = month + 1;
+		System.out.println(month);
+		String monthString = toString();
+		if (monthString.length() == 1) {
+			monthString = "0" + monthString;
+		}
+		System.out.println(month);
+		dateString = year.toString() + "-" + month.toString() + "-" + day.toString();
+		
+		
+		return dateString;
+		
+	}
+
+	public String getExchangeFrom(String currency) {
+
+		String currencyCode = "";
+
+		switch (currency) {
+
+		case "Dollar": currencyCode = "USD";
+			break;
+		case "Euro": currencyCode = "EUR";
+			break;
+		case "Czech Crown": currencyCode = "CZK";
+			break;
+		case "Zloty": currencyCode = "PLN";
+			break;
+		case "Pound": currencyCode = "GBP";
+			break;
+		case "Yen": currencyCode = "JPY";
+			break;
+		default:
+			break;
+		}
+
+
+		return currencyCode;
+
+	}
+
+
+public String getExchangeTo(String currency) {
+
+		String currencyCode = "";
+
+		switch (currency) {
+
+		case "Dollar": currencyCode = "USD";
+			break;
+		case "Euro": currencyCode = "EUR";
+			break;
+		case "Czech Crown": currencyCode = "CZK";
+			break;
+		case "Zloty": currencyCode = "PLN";
+			break;
+		case "Pound": currencyCode = "GBP";
+			break;
+		case "Yen": currencyCode = "JPY";
+		break;
+		default:
+			break;
+		}
+
+
+		return currencyCode;
+
+	}
+
+
+}

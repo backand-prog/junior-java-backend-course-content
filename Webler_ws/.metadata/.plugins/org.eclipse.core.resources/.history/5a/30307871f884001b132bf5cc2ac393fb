@@ -1,0 +1,14 @@
+package progKurzus;
+
+import java.util.List;
+
+public class ProgKurzus {
+	
+	public int beiratkozottFo(List<Tanulok> tanulok) {
+		
+		return (int) tanulok.stream().count();
+		
+		
+	}
+
+}

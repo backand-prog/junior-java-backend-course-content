@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\backandras\Desktop\seleniumVilma\seleniumVilma"/>
+			<item value="C:\Users\backandras\Desktop\seleniumVilma"/>
+			<item value="C:\Users\backandras\Desktop\PS_ws_HSZ20201125\mavenKonzol"/>
+			<item value="C:\Users\backandras\Desktop\PS_ws_HSZ20201125\mavenKonzol\pom.xml"/>
+			<item value="C:\Users\backandras\Desktop\PS_ws_HSZ20201125\PS_01_01_HelloWorld"/>
+			<item value="C:\Users\backandras\Desktop\PS_ws_HSZ20201125\PS_01_02_Konzol\src\konzol\App.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="seleniumVilma"/>
+		</list>
+		<list key="name">
+			<item value="seleniumVilma"/>
+		</list>
+		<list key="artifactId">
+			<item value="seleniumVilmma"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\backandras\Desktop\loan"/>
+			<item value="C:\Users\backandras\Desktop\HF_konyvtar_kesz"/>
+			<item value="C:\Users\backandras\Desktop\konyvtar"/>
+			<item value="C:\Users\backandras\Desktop\konyvtar_importalas_kezd\konyvtar\src\main\webapp\WEB-INF\jsp\index.jsp"/>
+			<item value="C:\Users\backandras\Desktop\musiclib_import_start\musiclib"/>
+			<item value="C:\Users\backandras\Desktop\musiclib_import_start"/>
+			<item value="C:\Users\backandras\Desktop\konyvtar_importalas_kezd"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

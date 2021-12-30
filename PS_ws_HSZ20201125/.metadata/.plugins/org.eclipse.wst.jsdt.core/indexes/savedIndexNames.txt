@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\backandras\Desktop\PS_ws_HSZ20201125\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2307237976.index
+846294515.index
+197691147.index
+2607660931.index
+3104299596.index
+3505369240.index
+3032850555.index

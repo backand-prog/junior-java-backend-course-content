@@ -1,0 +1,12 @@
+package sandbox;
+
+public class Playground {
+
+
+	public void helloWorld() {
+		
+		System.out.println("Hello world");
+	
+	}
+	
+}

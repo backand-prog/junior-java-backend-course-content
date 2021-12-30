@@ -1,0 +1,4 @@
+Teszt Elek;180
+Gipsz Jakab;160
+Kala Pál;177
+Nap Pali;192

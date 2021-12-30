@@ -1,0 +1,133 @@
+package afrolyamAblakos;
+
+import java.rmi.RemoteException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import hu.mnb.www.webservices.MNBArfolyamServiceSoapProxy;
+import hu.mnb.www.webservices.MNBArfolyamServiceSoap_GetExchangeRates_StringFault_FaultMessage;
+
+public class ConvertCurrencies {
+
+	private MNBArfolyamServiceSoapProxy afObj = new MNBArfolyamServiceSoapProxy();
+
+	public Double changeCurrency (String amount, String currencyCodeFrom, String currencyCodeTo) {
+		Double result = 0.0;
+		Double exchangeRateFrom = 0.0;
+		Double exchangeRateTo = 0.0;
+
+		
+		try {
+			
+		
+			/* The program running with the actual date
+			Date date = new Date();
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");  
+		    String currentDate = formatter.format(date).toString();    
+			*/
+			
+						
+			
+			if (!currencyCodeFrom.equals("Forint")) {
+				
+				currencyCodeFrom = getExchangeFrom(currencyCodeFrom);
+				exchangeRateFrom = Double.parseDouble(afObj.getExchangeRates(currentDate, currentDate, currencyCodeFrom, date)
+						.split("curr=\"" + currencyCodeFrom +"\">")[1]
+								.split("</Rate>")[0]
+										.replace(",", "."));
+				
+
+			} 
+
+			if (!currencyCodeTo.equals("Forint")) {
+				
+				currencyCodeTo = getExchangeTo(currencyCodeTo);
+				exchangeRateTo = Double.parseDouble(afObj.getExchangeRates(currentDate, currentDate, currencyCodeTo)
+						.split("curr=\"" + currencyCodeTo +"\">")[1]
+								.split("</Rate>")[0]
+										.replace(",", "."));
+				
+			}
+
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		} catch (MNBArfolyamServiceSoap_GetExchangeRates_StringFault_FaultMessage e) {	
+			e.printStackTrace();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+
+
+		
+		if (currencyCodeFrom.equals("Forint") && currencyCodeTo.equals("Forint")) {
+			result = Double.parseDouble(amount);
+		} else if (!currencyCodeFrom.equals("Forint") && currencyCodeTo.equals("Forint")) {
+			result = Double.parseDouble(amount) * exchangeRateFrom;
+		} else if (!currencyCodeTo.equals("Forint") && currencyCodeFrom.equals("Forint")) {
+			result = Double.parseDouble(amount) / exchangeRateTo;
+		} else if (!currencyCodeFrom.equals("Forint") && !currencyCodeTo.equals("Forint")) {
+			Double amountInFt = exchangeRateFrom * Double.parseDouble(amount);
+			result = amountInFt / exchangeRateTo;
+		}
+		return result;
+
+	}
+
+	public String getExchangeFrom(String currency) {
+
+		String currencyCode = "";
+
+		switch (currency) {
+
+		case "Dollar": currencyCode = "USD";
+			break;
+		case "Euro": currencyCode = "EUR";
+			break;
+		case "Czech Crown": currencyCode = "CZK";
+			break;
+		case "Zloty": currencyCode = "PLN";
+			break;
+		case "Pound": currencyCode = "GBP";
+			break;
+		case "Yen": currencyCode = "JPY";
+			break;
+		default:
+			break;
+		}
+
+
+		return currencyCode;
+
+	}
+
+
+public String getExchangeTo(String currency) {
+
+		String currencyCode = "";
+
+		switch (currency) {
+
+		case "Dollar": currencyCode = "USD";
+			break;
+		case "Euro": currencyCode = "EUR";
+			break;
+		case "Czech Crown": currencyCode = "CZK";
+			break;
+		case "Zloty": currencyCode = "PLN";
+			break;
+		case "Pound": currencyCode = "GBP";
+			break;
+		case "Yen": currencyCode = "JPY";
+		break;
+		default:
+			break;
+		}
+
+
+		return currencyCode;
+
+	}
+
+
+}

@@ -1,0 +1,10 @@
+package progKurzus;
+
+public class ProgKurzus {
+	
+	public int beiratkozottFo(List<Tanulo> tanulok) {
+		
+		
+	}
+
+}

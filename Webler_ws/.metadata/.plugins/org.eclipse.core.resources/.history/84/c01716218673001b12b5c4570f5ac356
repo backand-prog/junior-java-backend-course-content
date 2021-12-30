@@ -1,0 +1,164 @@
+package afrolyamAblakos;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.SystemColor;
+import javax.swing.SwingConstants;
+
+import hu.mnb.www.webservices.MNBArfolyamServiceSoapProxy;
+import hu.mnb.www.webservices.MNBArfolyamServiceSoap_GetCurrencies_StringFault_FaultMessage;
+import hu.mnb.www.webservices.MNBArfolyamServiceSoap_GetExchangeRates_StringFault_FaultMessage;
+
+import java.awt.event.ActionListener;
+import java.rmi.RemoteException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JFormattedTextField;
+import javax.swing.DropMode;
+import com.toedter.calendar.JDateChooser;
+
+
+
+public class CurrencyConverter {
+
+	private JFrame frmCurrencyConverter;
+	private JTextField tfEchangeFrom;
+	private JButton btnConvert;
+	private JComboBox cbEchangeFrom;
+	private JComboBox cbExcangeTo;
+	private MNBArfolyamServiceSoapProxy afObj = new MNBArfolyamServiceSoapProxy();
+	private JLabel lblResultDisplay;
+	private JButton btnExit;
+	private JLabel lblExceptions;
+	private ConvertCurrencies cc = new ConvertCurrencies(); 
+	private JLabel lblResult;
+	private JLabel lblDate;
+	private JDateChooser dateChooser;
+	
+	
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CurrencyConverter window = new CurrencyConverter();
+					window.frmCurrencyConverter.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public CurrencyConverter() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		
+		
+		frmCurrencyConverter = new JFrame();
+		frmCurrencyConverter.setTitle("Currency Converter");
+		frmCurrencyConverter.setBounds(100, 100, 488, 468);
+		frmCurrencyConverter.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmCurrencyConverter.getContentPane().setLayout(null);
+		
+		tfEchangeFrom = new JTextField();
+		tfEchangeFrom.setHorizontalAlignment(SwingConstants.CENTER);
+		tfEchangeFrom.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		tfEchangeFrom.setBounds(22, 127, 145, 37);
+		frmCurrencyConverter.getContentPane().add(tfEchangeFrom);
+		tfEchangeFrom.setColumns(10);
+		
+		cbEchangeFrom = new JComboBox();
+		cbEchangeFrom.setModel(new DefaultComboBoxModel(new String[] {"Forint", "Euro", "Dollar", "Czech Crown", "Zloty", "Pound", "Yen"}));
+		cbEchangeFrom.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		cbEchangeFrom.setBounds(200, 132, 163, 26);
+		frmCurrencyConverter.getContentPane().add(cbEchangeFrom);
+		
+		cbExcangeTo = new JComboBox();
+		cbExcangeTo.setModel(new DefaultComboBoxModel(new String[] {"Forint", "Euro", "Dollar", "Czech Crown", "Zloty", "Pound", "Yen"}));
+		cbExcangeTo.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		cbExcangeTo.setBounds(200, 204, 163, 26);
+		frmCurrencyConverter.getContentPane().add(cbExcangeTo);
+		
+		lblResultDisplay = new JLabel("");
+		lblResultDisplay.setForeground(new Color(204, 0, 0));
+		lblResultDisplay.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		lblResultDisplay.setBounds(126, 312, 334, 37);
+		frmCurrencyConverter.getContentPane().add(lblResultDisplay);
+		
+		btnConvert = new JButton("CONVERT");
+		btnConvert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				
+				lblResultDisplay.setText(cc.changeCurrency(tfEchangeFrom.getText(), cbEchangeFrom.getSelectedItem().toString(), cbExcangeTo.getSelectedItem().toString(), dateChooser.getCalendar()).toString());
+
+				}
+			});
+		btnConvert.setBackground(SystemColor.activeCaption);
+		btnConvert.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnConvert.setBounds(200, 262, 163, 37);
+		frmCurrencyConverter.getContentPane().add(btnConvert);
+		
+		btnExit = new JButton("EXIT");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				System.exit(0);
+				
+			}
+			
+		});
+		btnExit.setFont(new Font("Tahoma", Font.BOLD, 16));
+		btnExit.setBackground(new Color(255, 51, 51));
+		btnExit.setBounds(309, 377, 132, 31);
+		frmCurrencyConverter.getContentPane().add(btnExit);
+		
+		lblExceptions = new JLabel("");
+		lblExceptions.setForeground(new Color(204, 0, 0));
+		lblExceptions.setBounds(32, 177, 274, 27);
+		frmCurrencyConverter.getContentPane().add(lblExceptions);
+		
+		lblResult = new JLabel("Result:");
+		lblResult.setHorizontalAlignment(SwingConstants.CENTER);
+		lblResult.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblResult.setBounds(12, 312, 139, 37);
+		frmCurrencyConverter.getContentPane().add(lblResult);
+		
+		lblDate = new JLabel("Date:");
+		lblDate.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDate.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblDate.setBounds(-16, 47, 184, 37);
+		frmCurrencyConverter.getContentPane().add(lblDate);
+		
+		dateChooser = new JDateChooser();
+		dateChooser.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		dateChooser.setDateFormatString("yyyy-MM-dd");
+		dateChooser.setBounds(194, 47, 184, 37);
+		frmCurrencyConverter.getContentPane().add(dateChooser);
+		
+		
+		
+
+	}
+}

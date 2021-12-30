@@ -1,0 +1,26 @@
+1613645672547	Rename type 'arfolyamokBekeres'
+1613645681371	Rename type 'teszt'
+1613660798937	Delete element
+1613723500962	Delete element
+1613723880383	Rename method 'EuroRate'
+1613727217669	Extract local variable 'parseDouble'
+1613729791132	Rename local variable 'coverted'
+1613729808701	Rename local variable 'ft'
+1613729831386	Rename local variable 'covertedCurrency'
+1613729847473	Rename local variable 'exchangeRateEuro'
+1613729855557	Rename local variable 'exchangeRateDollar'
+1613729872609	Delete element
+1613729888837	Delete element
+1613731416998	Rename local variable 'exchangeRateDollarToFt'
+1613731426008	Rename local variable 'dollarConvertedToFt'
+1613737959693	Rename local variable 'exchangeRate'
+1613744376007	Move compilation unit
+1613744816464	Delete element
+1613745938244	Rename local variable 'date1'
+1613746025533	Rename local variable 'dateTemp'
+1613746302341	Rename local variable 'currentDateString'
+1613750623840	Rename local variable 'frmDdate'
+1613829354762	Rename local variable 'dateSting'
+1613854667982	Rename package 'afrolyamAblakos'
+1613858220071	Rename field 'date'
+1613936382075	Rename method 'filterByCurrency'

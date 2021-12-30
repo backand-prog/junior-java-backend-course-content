@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Trip calculator</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container my-3">
+			<h1 class="display-3 text-center font-weight-bold bg-primary text-dark" >Trip calculator</h1>
+			<form action='displayCarData.jsp' method='POST'>
+				<div class='form-group'>
+					<label for='plateNum'>Plate number</label>
+					<input type="text" class="form-control" placeholder="PCA-170" name="plateNum" id="plateNum" required>
+				</div>
+				<div class="form-group">
+					<label for="consumption">Consumption</label>
+					<input type="number" class="form-control" name="consumption" id="consumption" min="0" required>
+				</div>
+				<div class="form-group">
+					<label for="fuelType">Fuel type</label>
+					<select name="fuelType" class="form-control">
+						<option value="dizel">Dízel</option>
+						<option value="benzin">Benzin</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="portablePeopleCount">Portable people count</label>
+					<input type="number" class="form-control" name="portablePeopleCount" min="0" id="portablePeopleCount" required>
+				</div>
+				<div class="form-group">
+					<label for="engineVolumeCapacity">Engine volume capacity</label>
+					<input type="number" class="form-control" name="engineVolumeCapacity" min="0" id="engineVolumeCapacity" required>
+				</div>
+				<div class="form-group">
+					<label for="productionYear">Production year</label>
+					<input type="number" class="form-control name="productionYear" id="productionYear" min="1900" required>
+				</div>
+				<input type="submit" value="SUBMIT">		
+			</form>
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;cal&apos; in &apos;szineszek.Feladatok.fiatalSzineszekFajlba(...)&apos; to &apos;szulDatum&apos;&#x0D;&#x0A;- Original project: &apos;vizsgaGyak&apos;&#x0D;&#x0A;- Original element: &apos;szineszek.Feladatok.fiatalSzineszekFajlba(List&lt;SzineszTarolo&gt;).cal&apos;&#x0D;&#x0A;- Renamed element: &apos;cal&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;cal&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;szineszek{Feladatok.java[Feladatok~fiatalSzineszekFajlba~QList\&lt;QSzineszTarolo;&gt;;@cal!1767!1804!1776!1778!QCalendar;!0!false" name="szulDatum" references="true" stamp="1615836510487" version="1.0"/>
+</session>

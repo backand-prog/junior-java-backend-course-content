@@ -1,0 +1,14 @@
+package sandbox;
+
+public class Playground {
+	public static int a;
+	
+	public static void main(String[] args) {
+		
+		Playground.a = 1;
+		System.out.println(a);
+		
+	}
+	
+	
+}

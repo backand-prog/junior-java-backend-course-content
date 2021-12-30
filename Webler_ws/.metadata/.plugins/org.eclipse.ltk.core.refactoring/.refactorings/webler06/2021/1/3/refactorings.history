@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;oopRaktar.Feladatok.hibaLeltarSzamuAdatTorol(...)&apos; to &apos;hibasLeltarSzamuAdatTorol&apos;&#x0D;&#x0A;- Original project: &apos;webler06&apos;&#x0D;&#x0A;- Original element: &apos;oopRaktar.Feladatok.hibaLeltarSzamuAdatTorol(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;oopRaktar.Feladatok.hibasLeltarSzamuAdatTorol(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;hibaLeltarSzamuAdatTorol&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;oopRaktar{Feladatok.java[Feladatok~hibaLeltarSzamuAdatTorol~QList\&lt;QEszkozTarolo;&gt;;" name="hibasLeltarSzamuAdatTorol" references="true" stamp="1610995539600" version="1.0"/>
+</session>

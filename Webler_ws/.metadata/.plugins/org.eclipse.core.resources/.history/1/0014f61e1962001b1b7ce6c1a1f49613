@@ -1,0 +1,84 @@
+package kosar2004;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+public class Feladatok {
+
+	//3. feladat
+	
+	public String meccsekMadrid(List<KosarasTarolo> meccsek) {
+
+		int madridHazaiDb = 0;
+		int madridIdegenDb = 0;
+		
+		for (int i = 0; i < meccsek.size(); i++) {
+			if (meccsek.get(i).getHazai().equals("Real Madrid")) {
+				madridHazaiDb++;
+			}
+			
+			if (meccsek.get(i).getIdegen().equals("Real Madrid")) {
+				madridIdegenDb++;
+			}
+		}
+
+		return ("Real Madrid: Hazai " + madridHazaiDb + ", Idegen: " + madridIdegenDb);
+		
+	}
+	
+	//4. feladat
+	
+	public boolean dontetlenek(List<KosarasTarolo> meccsek) {
+		
+		boolean dontetlen = false;
+		for (KosarasTarolo item : meccsek) {
+			if (item.getHazaiPont() == item.getIdegenPont()) {
+				dontetlen = true;
+			}
+		}
+		
+		
+		return dontetlen;
+		
+		
+	}
+	
+	//5. feladat
+	
+	public String nevBarcelona(List<KosarasTarolo> meccsek) {
+		String teljesNev = "";
+		
+		for (KosarasTarolo item : meccsek) {
+			if (item.getHazai().contains("Barcelona")) {
+				teljesNev = item.getHazai();
+			}
+		}
+		
+		return teljesNev;
+		
+	}
+	
+	//6. feladat
+	
+	public void adottDatumMeccsek(List<KosarasTarolo> meccsek) {
+		
+		
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(2004, 10, 21);
+		
+		Date datum = calendar.getTime();
+		
+		System.out.printf("%tF", datum);
+		System.out.printf("%2$tF", "A következõ csapatok játszottak " +  datum + "-én:");
+		for (KosarasTarolo item : meccsek) {
+			if (item.getIdopont().equals(datum)) {
+				
+			}
+		}
+
+
+	}
+	
+	
+}

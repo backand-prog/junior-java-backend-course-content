@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;szmzv02_pv_03_BackAndras&apos; to &apos;szmzv02_htmlparsing_BackAndras&apos;&#x0D;&#x0A;- Original project: &apos;szmzv02_htmlparsing_BackAndras&apos;&#x0D;&#x0A;- Original element: &apos;szmzv02_htmlparsing_BackAndras/src/szmzv02_pv_03_BackAndras&apos;&#x0D;&#x0A;- Renamed element: &apos;szmzv02_htmlparsing_BackAndras/src/szmzv02_htmlparsing_BackAndras&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;szmzv02_pv_03_BackAndras&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;szmzv02_pv_03_BackAndras" name="szmzv02_htmlparsing_BackAndras" qualified="false" references="true" stamp="1619767601706" textual="false" version="1.0"/>
+</session>

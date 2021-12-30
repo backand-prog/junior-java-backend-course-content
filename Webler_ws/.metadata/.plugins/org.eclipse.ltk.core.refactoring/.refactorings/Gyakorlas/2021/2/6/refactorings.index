@@ -1,0 +1,6 @@
+1613048429790	Rename local variable 'szamLista'
+1613206163324	Extract local variable 'collect'
+1613238657039	Delete element
+1613239518534	Rename type 'fajlKezelo'
+1613242182268	Rename method 'atlagAr'
+1613242241070	Rename local variable 'atlag'

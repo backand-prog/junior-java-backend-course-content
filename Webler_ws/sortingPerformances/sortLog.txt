@@ -1,0 +1,5 @@
+
+03-01-2021 22:41:01 Az egyszerû cserés módszerrel 500000 db 1 és 1 millió közötti szám sorbarendezése 334 másodpercig tartott.
+03-01-2021 22:51:49 A buborékcserés módszerrel 500000 db 1 és 1 millió közötti szám sorbarendezése 360 másodpercig tartott.
+03-01-2021 22:59:38 A minimum kiválasztás rendezés módszerrel 500000 db 1 és 1 millió közötti szám sorbarendezése 412 másodpercig tartott.
+03-01-2021 23:00:13 QuickSort módszerrel 500000 db 1 és 1 millió közötti szám sorbarendezése 3 másodpercig tartott.

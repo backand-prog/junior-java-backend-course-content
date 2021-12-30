@@ -1,0 +1,18 @@
+package HF01;
+
+public class sandbox {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Hello\rWorld");
+		
+		int a = 3;
+		String b = Float.toString(a);
+		
+		System.out.println(b);
+		
+	
+		
+	}
+
+}

@@ -1,0 +1,129 @@
+package eu.pontsystems.javatanfolyam.konyvtar.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import eu.pontsystems.javatanfolyam.konyvtar.model.Book;
+import eu.pontsystems.javatanfolyam.konyvtar.util.Db;
+
+public class BookRepository {
+
+	public List<Book> queryAllBooks() {
+		Db dbObj = new Db();
+
+		Connection con = dbObj.getConnection();
+
+		List<Book> books = new ArrayList<Book>();
+
+		try {
+			
+			PreparedStatement pstmt = con.prepareStatement("SELECT id, title, author FROM book;");
+			ResultSet rs = pstmt.executeQuery();
+			while(rs.next()) {
+
+				books.add(new Book(
+						rs.getString("id"), 
+						rs.getString("title"), 
+						rs.getString("author")
+						));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (con !=null) {
+				dbObj.closeConnection(con);
+			}
+
+		}
+
+		return books;
+	}
+
+	public void save(Book bookObj) {
+		Db dbObj = new Db();
+		Connection con = dbObj.getConnection();
+		
+		try {
+			PreparedStatement pstmt = con.prepareStatement("INSERT INTO book (title, author) VALUES (?,?)");
+			pstmt.setString(1, bookObj.getTitle());
+			pstmt.setString(2, bookObj.getAuthor());
+			pstmt.executeUpdate();
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		
+	}
+
+	public void update(Book bookObj) {
+		Db dbObj = new Db();
+		Connection con = dbObj.getConnection();
+		
+		PreparedStatement pstmt;
+		try {
+			pstmt = con.prepareStatement("UPDATE book SET title = ?, author = ? WHERE id = ?");
+			pstmt.setString(1, bookObj.getTitle());
+			pstmt.setString(2, bookObj.getAuthor());
+			pstmt.setString(3, bookObj.getId());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+		
+	}
+
+	public Book findBook(String id) {
+		Db dbObj = new Db();
+		Connection con = dbObj.getConnection();
+		PreparedStatement pstmt;
+		try {
+			pstmt = con.prepareStatement("SELECT id, title, author FROM book WHERE id = ?");
+			pstmt.setString(1, id);
+			ResultSet rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				
+				return extractBookFromRs(rs);
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	private Book extractBookFromRs(ResultSet rs) throws SQLException {
+		
+		return new Book(rs.getString("id"), rs.getString("title"), rs.getString("author"));
+	}
+
+}

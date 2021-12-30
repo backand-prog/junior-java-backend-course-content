@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<moveEntry
+		id="org.eclipse.wb.swing.components javax.swing.JButton"
+		category="org.eclipse.wb.swing.components"
+		nextEntry="org.eclipse.wb.swing.components javax.swing.JRadioButton"/>
+	<addComponent
+		id="com.toedter.calendar.JDateChooser_1613827156570"
+		name="JDateChooser"
+		description="Custom component: com.toedter.calendar.JDateChooser"
+		visible="true"
+		class="com.toedter.calendar.JDateChooser"
+		category="org.eclipse.wb.swing.BoxLayout"/>
+	<moveEntry
+		id="com.toedter.calendar.JDateChooser_1613827156570"
+		category="org.eclipse.wb.swing.components"
+		nextEntry="org.eclipse.wb.swing.components javax.swing.JTextField"/>
+</commands>

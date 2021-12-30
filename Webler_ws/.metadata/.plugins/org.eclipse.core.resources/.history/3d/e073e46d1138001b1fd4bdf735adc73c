@@ -1,0 +1,16 @@
+package HF01;
+
+public class sandbox {
+
+	public static void main(String[] args) {
+		
+		int a = 1;
+		
+		a <<= 3;
+		
+		System.out.println(a);
+		
+		
+	}
+
+}

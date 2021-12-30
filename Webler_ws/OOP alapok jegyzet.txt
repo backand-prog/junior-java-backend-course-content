@@ -1,0 +1,92 @@
+A JAVA OOP nyelv, nem lehet benne funkcionálisan fejleszteni
+	- a funkcionális személeletmód korábbi 
+	- a kettő egymással ellentétes, konkurenciák
+	- C# és JAVA kizárólag OOP
+	- OOP igyekszik az az emberi gondolkodást lekövetni
+	
+Példa:
+- Tanterem	(osztály)	- Tanfolyam (osztály)		- Hallgatók (osztály)		--> Ács Imre - osztályból object
+
+ADATTAGOK																			
+munkaállomások száma	hallgatók száma				szigszám						213213213
+projektor											érettségi biz szám				213213
+													tanfolyamdíj hátralék			12321312
+
+VISELKEDÉSFORMÁK
+													részvétel az órákon()			
+													sikeres vizsga()
+													házifeladatot megcsinál()
+	
+			KONSTRUKTOR - létrejön az objektumpéldány a classból
+Class -> auto	---> Én autóm
+ADATTAGOK		
+rendszám			PHW-088
+alvázszám			123213213
+gyártó				KIA
+típus				RIO
+fogyasztás			5
+VISELKEDÉSEK
+gyorsul()			
+fékez()				
+parkol()			
+
+Fogalmak:
+absztrakció: csak a lényegre koncentrálni, lényeges elemek kiemelése
+megkülönböztetés: csoportosítjuk az objektumokat tulajdonságok alapján
+osztályozás: kategóriákba, osztályokba sorolás
+általánosítás: az ember folymaatosan keresi a hasonlóságokat és különbözőségeket
+kapcsolatok felépítése:
+	rész-egész: - pl. sütemény alkotóelemei - olyan függőségi visozny van, amit nem tudunk kikerülni
+	ismeretségi kapcsolat: kutya és a ház esete - mindegyiknek megvannak a saját tulajdonságai- egyikük léte nem függ a másiktól
+	
+
+OOP program - egymással kommunikáló objektumokat - mindennek megvan a jól meghatározott feladatköre
+privát adatok, a belső működés nem látszik kívülről
+minden objektumnak van egy interfész része, ahol lehet vele kommunikálni
+objektum megkérhet másik objektumot rész vagy egész feladatok elvégzésére
+akkor is felelős a feladatért, ha delegálja
+
+
+Osztály - általunk definiált tervrajz (blueprint) - leírja valaminek a természetét
+		attribútimai (mezők, tuladjonságok) és műveletek (java-ban osztályon belüli műveletek -> metódusok)
+Objektum - példányosított osztály
+Objektumorienált program - egymással kommunikáló objektumok összessége
+Üzenet - objektumhoz továbbított kérés, válaszként az objektum végrehajtja a kért műveletet
+Egységbezárás - csak a metódusokon keresztül lehet változtatni az objekteken
+Információ elrejtése - a belső folyamatok rejtve vannak
+Öröklődés - osztályok örökölhetnek egmyástól
+Polimorfizmus - pl. metódusok túlterhelése - ugyanarra a kérelemre különböző objektumok máshogy reagálhatnak
+Konstruktor - az a művelet, amely inicializálja, létrehozza a példány egy példányát
+	az osztály nevével azonos metódus
+Destruktor - a konstrutorral ellentétes művelet, a konstruktorban lekötött erőforrásokat szabadítja fel
+	Garbage Collector automatikusan felszabadítja -> nem használt objektumok esetén
+
+
+Láthatósági szintek - hozzáférési szintek
+
+public - mindenki láthatja, bárhonnan elérhetjük - adatmezőt/eljárást bárki módosíthatja
+proteced - class, package subclass eléri
+private - csak a classon belül látjuk
+ha nincs módosító - classon és packagen látják
+
+Modifier		Class		Package		Subclass		World
+public			Y			Y			Y				Y
+protected		Y			Y			Y				
+no mod			Y			Y			
+private			Y		
+
+fontos - jól el kell különíteni az osztályokat
+
+
+felépítés:
+adattagok
+konstruktorok
+getter setterek
+saját metódusok
+
+
+
+
+
+	
+	
